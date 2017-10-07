@@ -1,6 +1,6 @@
 general {
     colors = true
-    interval = 2
+    interval = 1
 }
 
 order += "wireless _first_"
@@ -34,6 +34,7 @@ battery all {
     status_unk = ""
     status_full = ""
     low_threshold = 20
+    threshold_type = "percentage"
     integer_battery_capacity = true
 }
 
