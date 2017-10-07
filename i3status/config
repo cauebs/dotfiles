@@ -1,0 +1,46 @@
+general {
+    colors = true
+    interval = 2
+}
+
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "volume master"
+order += "battery all"
+order += "tztime date"
+order += "tztime time"
+
+wireless _first_ {
+    format_up = "%quality %essid %ip"
+    format_down = ""
+}
+
+ethernet _first_ {
+    format_up = " %ip"
+    format_down = ""
+}
+
+volume master {
+    device = "pulse"
+    format = " %volume"
+    format_muted = " %volume"
+}
+
+battery all {
+    format = "%status %percentage"
+    format_down = ""
+    status_chr = ""
+    status_bat = ""
+    status_unk = ""
+    status_full = ""
+    low_threshold = 20
+    integer_battery_capacity = true
+}
+
+tztime date {
+    format = "%a, %-d %b"
+}
+
+tztime time {
+    format = "%H:%M"
+}
