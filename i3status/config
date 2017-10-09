@@ -1,6 +1,7 @@
 general {
     colors = true
-    interval = 1
+    interval = 5
+    output_format = "i3bar"
 }
 
 order += "wireless _first_"
@@ -28,6 +29,8 @@ volume master {
 
 battery all {
     format = "%status %percentage"
+    last_full_capacity = true
+    hide_seconds = true
     format_down = ""
     status_chr = ""
     status_bat = ""

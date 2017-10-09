@@ -2,8 +2,10 @@
 allow_bold = true
 browser = firefox
 clickable_url = true
-font = monospace 10 
-
+font = monospace 10
+cursor_shape=underline
+mouse_autohide = true
+size_hints = true
 
 [colors]
 foreground = #F8F8F2
