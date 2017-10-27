@@ -1,0 +1,6 @@
+bindsym Print exec ss.py
+bindsym Control+Print exec ss.py -c
+bindsym Mod1+Print exec ss.py -w
+bindsym Control+Mod1+Print exec ss.py -w -c
+bindsym Shift+Print exec ss.py -r
+bindsym Control+Shift+Print exec ss.py -r -c

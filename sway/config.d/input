@@ -1,0 +1,9 @@
+# man 5 sway-input
+# swaymsg -t get_inputs
+
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    dwt enabled
+    tap enabled
+    natural_scroll disabled
+    middle_emulation enabled
+}

@@ -1,0 +1,10 @@
+set $term termite
+set $menu dmenu_run
+set $firefox firefox-nightly
+set $telegram .local/share/TelegramDesktop/Telegram
+
+bindsym $mod+Return exec $term
+bindsym Insert exec $term -e python
+bindsym $mod+d exec $menu
+bindsym $mod+t exec $telegram
+bindsym $mod+x exec $firefox

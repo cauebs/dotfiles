@@ -1,0 +1,4 @@
+# swaymsg -t get_outputs
+# output HDMI-A-1 resolution 1920x1080 position 1920,0
+
+output * bg #282A36 solid_color
