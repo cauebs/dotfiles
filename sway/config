@@ -56,6 +56,10 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+Ctrl+Tab workspace next
+
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -105,6 +109,40 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# set $screenshot_screen "capture screen: [f]ile [c]lipboard"
+# mode $screenshot_screen {
+#     bindsym f exec 'swaygrab - | convert -size 1366x768 -depth 8 rgba:- png:$HOME/$(date "+%F-%H%M%S")_swaygrab.png', mode "default"
+#     bindsym c exec 'swaygrab - | convert -size 1366x768 -depth 8 rgba:- png:- | xclip -i -t image/png -selection clipboard', mode "default"
+
+#     bindsym Escape mode "default"
+# }
+
+# set $screenshot_window "capture window: [f]ile [c]lipboard"
+# mode $screenshot_window {
+#     bindsym f exec 'swaygrab -f - | convert -size 1366x768 -depth 8 rgba:- png:$HOME/$(date "+%F-%H%M%S")_swaygrab.png', mode "default"
+#     bindsym c exec 'swaygrab -f - | convert -size 1366x768 -depth 8 rgba:- png:- | xclip -i -t image/png -selection clipboard', mode "default"
+
+#     bindsym Escape mode "default"
+# }
+
+# set $screenshot_region "capture region: [f]ile [c]lipboard"
+# mode $screenshot_region {
+#     bindsym f exec 'swaygrab - | convert -size 1366x768 -depth 8 rgba:- -crop (slop) png:$HOME/$(date "+%F-%H%M%S")_swaygrab.png', mode "default"
+#     bindsym c exec 'swaygrab - | convert -size 1366x768 -depth 8 rgba:- -crop (slop) png:- | xclip -i -t image/png -selection clipboard', mode "default"
+
+#     bindsym Escape mode "default"
+# }
+
+# set $screenshot "capture: [s]creen [w]indow [r]egion"
+# mode $screenshot {
+#     bindsym s mode $screenshot_screen
+#     bindsym w mode $screenshot_window
+#     bindsym r mode $screenshot_region
+
+#     bindsym Escape mode "default"
+# }
+# bindsym Print mode $screenshot
 
 bar {
     status_command i3status | i3tg-poll

@@ -6,7 +6,7 @@
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.fontSize": 12,
-    "editor.renderWhitespace": "boundary",
+    "editor.renderWhitespace": "none",
 
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.dragAndDrop": false,
@@ -27,5 +27,7 @@
     "clang.cxxflags": ["-std=c++1z"],
 
     "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "workbench.activityBar.visible": false,
+    "jupyter.appendResults": false
 }

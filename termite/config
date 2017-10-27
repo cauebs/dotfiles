@@ -3,7 +3,7 @@ allow_bold = true
 browser = firefox
 clickable_url = true
 font = monospace 10
-cursor_shape=underline
+cursor_shape=block
 mouse_autohide = true
 size_hints = true
 
