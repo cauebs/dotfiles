@@ -1,6 +1,6 @@
 bar {
     status_command i3status | i3tg-poll
-    font DejaVu Sans Mono 9
+    font monospace 9
     colors {
         background #1c1c1c
         statusline #ffffff
