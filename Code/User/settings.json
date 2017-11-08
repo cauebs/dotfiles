@@ -29,5 +29,6 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "workbench.activityBar.visible": false,
-    "jupyter.appendResults": false
+    "jupyter.appendResults": false,
+    "window.zoomLevel": 0
 }
