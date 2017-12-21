@@ -1,5 +1,5 @@
 bar {
-    status_command i3status | i3tg-poll
+    status_command i3status
     font monospace 9
     colors {
         background #1c1c1c

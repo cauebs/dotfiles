@@ -2,14 +2,14 @@
 allow_bold = true
 clickable_url = true
 font = monospace 10
-cursor_shape=block
+cursor_shape= block
 mouse_autohide = true
 size_hints = true
 
 [colors]
 foreground = #F8F8F2
 foreground_bold = #F8F8F2
-cursor = #F8F8F2
+cursor = #929292
 background = #282A36
 color0 = #000000
 color8 = #4D4D4D
