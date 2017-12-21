@@ -1,0 +1,36 @@
+{
+    "editor.fontFamily": "'Fira Code', 'DejaVu Sans', 'monospace'",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 12,
+    "workbench.colorTheme": "Dracula",
+
+    "workbench.startupEditor": "none",
+    "window.menuBarVisibility": "hidden",
+    "window.enableMenuBarMnemonics": false,
+    "workbench.activityBar.visible": false,
+
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.dragAndDrop": false,
+    "editor.formatOnPaste": true,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+
+    "editor.rulers": [79],
+    "editor.mouseWheelZoom": true,
+    "editor.smoothScrolling": true,
+    "editor.minimap.enabled": false,
+    "editor.minimap.maxColumn": 79,
+    "editor.minimap.renderCharacters": false,
+
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "update.channel": "none"
+}
