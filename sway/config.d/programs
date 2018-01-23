@@ -1,6 +1,6 @@
 set $term termite
 set $firefox firefox-nightly
-set $telegram .local/share/TelegramDesktop/Telegram
+set $telegram telegram-desktop
 
 bindsym $mod+Return exec $term
 bindsym Insert exec $term -e python

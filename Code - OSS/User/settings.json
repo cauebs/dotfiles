@@ -8,17 +8,13 @@
     "window.menuBarVisibility": "hidden",
     "window.enableMenuBarMnemonics": false,
     "workbench.activityBar.visible": false,
+    "explorer.confirmDelete": false,
 
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.dragAndDrop": false,
     "editor.formatOnPaste": true,
-    "editor.quickSuggestions": {
-        "other": false,
-        "comments": false,
-        "strings": false
-    },
 
     "editor.rulers": [79],
     "editor.mouseWheelZoom": true,
@@ -29,6 +25,9 @@
 
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
+
+    "rust-client.channel": "stable",
+    "rust.all_features": true,
 
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
