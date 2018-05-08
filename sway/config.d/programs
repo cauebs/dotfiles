@@ -6,4 +6,4 @@ bindsym $mod+Return exec $term
 bindsym Insert exec $term -e python
 bindsym $mod+t exec $telegram
 bindsym $mod+x exec $firefox
-bindsym $mod+s exec spotify
+bindsym $mod+s exec slack

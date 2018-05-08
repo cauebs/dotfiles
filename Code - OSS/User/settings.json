@@ -1,14 +1,16 @@
 {
-    "editor.fontFamily": "'Fira Code', 'DejaVu Sans', 'monospace'",
+    "editor.fontFamily": "'Fira Code', 'DejaVu Sans Mono', 'monospace'",
     "editor.fontLigatures": true,
     "editor.fontSize": 12,
     "workbench.colorTheme": "Dracula",
 
     "workbench.startupEditor": "none",
-    "window.menuBarVisibility": "hidden",
+    "window.menuBarVisibility": "toggle",
     "window.enableMenuBarMnemonics": false,
     "workbench.activityBar.visible": false,
     "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "search.smartCase": true,
 
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
@@ -16,20 +18,25 @@
     "editor.dragAndDrop": false,
     "editor.formatOnPaste": true,
 
-    "editor.rulers": [79],
+    "editor.rulers": [80],
     "editor.mouseWheelZoom": true,
     "editor.smoothScrolling": true,
     "editor.minimap.enabled": false,
-    "editor.minimap.maxColumn": 79,
+    "editor.minimap.maxColumn": 80,
     "editor.minimap.renderCharacters": false,
 
+    "terminal.integrated.setLocaleVariables": true,
+
+    "python.venvPath": "~/.local/share/virtualenvs",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
 
-    "rust-client.channel": "stable",
+    "rust-client.channel": "nightly",
     "rust.all_features": true,
+    "rust.unstable_features": true,
 
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "update.channel": "none"
+    "workbench.statusBar.feedback.visible": false,
+    "update.channel": "none",
 }
