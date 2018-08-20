@@ -13,7 +13,8 @@ hide_edge_borders smart
 bar {
     status_command i3status
     tray_output primary
-    font pango:monospace 9
+    tray_output DP1
+    font pango:Fira Code 9
     colors {
         background #1c1c1c
         statusline #ffffff
@@ -27,8 +28,8 @@ bar {
     }
 }
 
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s 2%+
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 2%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s 5%+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
@@ -49,18 +50,18 @@ set $firefox firefox-nightly
 set $telegram telegram-desktop
 
 bindsym $mod+Return exec --no-startup-id $term
-bindsym Insert exec --no-startup-id $term -e python
+bindsym Insert exec --no-startup-id $term -e py
 bindsym $mod+t exec --no-startup-id $telegram
 bindsym $mod+x exec --no-startup-id $firefox
 bindsym $mod+s exec --no-startup-id slack
 
-bindsym Print exec --no-startup-id bash -c 'maim ~/$(date +%F-%T).png'
-bindsym Mod1+Sys_Req exec --no-startup-id bash -c 'maim -i $(xdotool getactivewindow) ~/$(date +%F-%T).png'
-bindsym Shift+Print exec --no-startup-id bash -c 'maim -s ~/$(date +%F-%T).png'
+bindsym Print exec --no-startup-id bash -c 'maim ~/$(date +%F-%T).png -u'
+bindsym Mod1+Sys_Req exec --no-startup-id bash -c 'maim -u -i $(xdotool getactivewindow) ~/$(date +%F-%T).png'
+bindsym Shift+Print exec --no-startup-id bash -c 'maim -s -u ~/$(date +%F-%T).png'
 
-bindsym Control+Print exec --no-startup-id bash -c 'maim | xclip -selection clipboard -t image/png'
-bindsym Control+Mod1+Sys_Req exec --no-startup-id bash -c 'maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png'
-bindsym Control+Shift+Print exec --no-startup-id bash -c 'maim -s | xclip -selection clipboard -t image/png'
+bindsym Control+Print exec --no-startup-id bash -c 'maim -u | xclip -selection clipboard -t image/png'
+bindsym Control+Mod1+Sys_Req exec --no-startup-id bash -c 'maim -u -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png'
+bindsym Control+Shift+Print exec --no-startup-id bash -c 'maim -s -u | xclip -selection clipboard -t image/png'
 
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+r reload
@@ -128,3 +129,5 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+bindsym $mod+p exec --no-startup-id mons -n right
