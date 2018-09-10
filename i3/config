@@ -55,6 +55,9 @@ bindsym $mod+t exec --no-startup-id $telegram
 bindsym $mod+x exec --no-startup-id $firefox
 bindsym $mod+s exec --no-startup-id slack
 
+exec --no-startup-id flameshot
+
+bindsym $mod+Print exec --no-startup-id flameshot gui
 bindsym Print exec --no-startup-id bash -c 'maim ~/$(date +%F-%T).png -u'
 bindsym Mod1+Sys_Req exec --no-startup-id bash -c 'maim -u -i $(xdotool getactivewindow) ~/$(date +%F-%T).png'
 bindsym Shift+Print exec --no-startup-id bash -c 'maim -s -u ~/$(date +%F-%T).png'
@@ -62,6 +65,8 @@ bindsym Shift+Print exec --no-startup-id bash -c 'maim -s -u ~/$(date +%F-%T).pn
 bindsym Control+Print exec --no-startup-id bash -c 'maim -u | xclip -selection clipboard -t image/png'
 bindsym Control+Mod1+Sys_Req exec --no-startup-id bash -c 'maim -u -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png'
 bindsym Control+Shift+Print exec --no-startup-id bash -c 'maim -s -u | xclip -selection clipboard -t image/png'
+
+bindsym $mod+Shift+c exec --no-startup-id bash ~/capture
 
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+r reload

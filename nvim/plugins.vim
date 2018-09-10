@@ -11,6 +11,7 @@ Plug 'cespare/vim-toml'
 call plug#end()
 
 color dracula
+hi Normal ctermbg=None
 "set background=dark
 "let g:gruvbox_contrast_dark='hard'
 
