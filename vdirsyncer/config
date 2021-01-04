@@ -1,0 +1,19 @@
+[general]
+status_path = "~/.local/share/vdirsyncer/status/"
+
+[pair my_calendars]
+a = "radicale"
+b = "local"
+collections = ["from a", "from b"]
+metadata = ["color"]
+
+[storage local]
+type = "filesystem"
+path = "~/.local/share/vdirsyncer/caldav/"
+fileext = ".ics"
+
+[storage radicale]
+type = "caldav"
+url = "http://localhost:5232"
+username = "cauebs"
+password.fetch = ["command", "~/.config/vdirsyncer/password.sh"]

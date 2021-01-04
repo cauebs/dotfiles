@@ -1,5 +1,18 @@
 [
     {
+        "key": "ctrl+[BracketLeft]",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+[BracketLeft]",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "rust-analyzer.toggleInlayHints"
+    },
+    {
         "key": "ctrl+tab",
         "command": "workbench.action.nextEditor"
     },
@@ -99,5 +112,19 @@
     {
         "key": "shift+alt+c",
         "command": "editor.action.codeAction"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "a",
+        "command": "-explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "-workbench.action.newWindow"
     },
 ]

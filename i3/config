@@ -10,10 +10,10 @@ default_border pixel 1
 default_floating_border pixel 1
 hide_edge_borders smart
 
+exec --no-startup-id i3wsr
+
 bar {
     status_command i3status
-    tray_output primary
-    tray_output DP1
     font pango:Fira Code 9
     colors {
         background #1c1c1c
@@ -21,15 +21,15 @@ bar {
         separator #656565
 
         # Class             Border  BG      Text
-        focused_workspace   #888888 #1c1c1c #eaeaea
-        active_workspace    #333333 #5f676a #ffffff
-        inactive_workspace  #333333 #222222 #888888
-        urgent_workspace    #2f343a #ffc123 #ffffff
+        focused_workspace #888888 #1c1c1c #eaeaea
+        active_workspace #333333 #5f676a #ffffff
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace #2f343a #ffc123 #ffffff
     }
 }
 
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s 5%+
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
+bindsym XF86MonBrightnessUp exec --no-startup-id lux -a 5%
+bindsym XF86MonBrightnessDown exec --no-startup-id lux -s 5%
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
@@ -41,19 +41,21 @@ bindsym XF86AudioNext exec --no-startup-id mpc next
 bindsym XF86AudioPrev exec --no-startup-id mpc cdprev
 
 bindsym Shift+XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym Shift+XF86AudioPause exec --no-startup-id playerctl play-pause
 bindsym Shift+XF86AudioStop exec --no-startup-id playerctl stop
 bindsym Shift+XF86AudioNext exec --no-startup-id playerctl next
 bindsym Shift+XF86AudioPrev exec --no-startup-id playerctl previous
 
-set $term termite
+set $term alacritty
 set $firefox firefox-nightly
 set $telegram telegram-desktop
 
 bindsym $mod+Return exec --no-startup-id $term
-bindsym Insert exec --no-startup-id $term -e py
+bindsym Insert exec --no-startup-id $term -e python
 bindsym $mod+t exec --no-startup-id $telegram
 bindsym $mod+x exec --no-startup-id $firefox
 bindsym $mod+s exec --no-startup-id slack
+bindsym $mod+d exec --no-startup-id exec dmenu_run -b -i -p '>' -fn 'Fira Code 11'
 
 exec --no-startup-id flameshot
 
@@ -69,7 +71,7 @@ bindsym Control+Shift+Print exec --no-startup-id bash -c 'maim -s -u | xclip -se
 bindsym $mod+Shift+c exec --no-startup-id bash ~/capture
 
 bindsym $mod+Shift+q kill
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 
 bindsym $mod+Left focus left
@@ -86,27 +88,27 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+Ctrl+Tab workspace next
 
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
 
-bindsym $mod+Shift+1 move container to workspace 1; workspace 1
-bindsym $mod+Shift+2 move container to workspace 2; workspace 2
-bindsym $mod+Shift+3 move container to workspace 3; workspace 3
-bindsym $mod+Shift+4 move container to workspace 4; workspace 4
-bindsym $mod+Shift+5 move container to workspace 5; workspace 5
-bindsym $mod+Shift+6 move container to workspace 6; workspace 6
-bindsym $mod+Shift+7 move container to workspace 7; workspace 7
-bindsym $mod+Shift+8 move container to workspace 8; workspace 8
-bindsym $mod+Shift+9 move container to workspace 9; workspace 9
-bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+bindsym $mod+Shift+1 move container to workspace number 1; workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2; workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3; workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4; workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5; workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6; workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7; workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8; workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9; workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10; workspace number 10
 
 bindsym $mod+h splith
 bindsym $mod+v splitv

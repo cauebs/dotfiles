@@ -1,0 +1,22 @@
+height=300
+anchor=top-right
+font=Fira Code 9
+text-color=#f8f8f2
+background-color=#282a36
+border-color=#ff79c6
+border-radius=3
+sort=+time
+group-by=summary
+default-timeout=3000
+icon-path=/usr/share/icons/hicolor/32x32/apps/
+
+[grouped]
+margin=-1,10,-1
+format=\n%b
+invisible=false
+icons=false
+
+[group-index=0]
+margin=10,10,-1
+format=<b>%s</b> (%g)\n%b
+icons=true

@@ -1,9 +1,28 @@
 # man 5 sway-input
 # swaymsg -t get_inputs
 
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_numlock enabled
+    xkb_layout br
+    xkb_variant abnt2
+}
+
+input "9494:127:Cooler_Master_Technology_Inc._Gaming_MECH_KB" {
+    xkb_numlock enabled
+    xkb_layout br
+    xkb_variant abnt2
+}
+
 input "2:7:SynPS/2_Synaptics_TouchPad" {
+    events disabled_on_external_mouse
     dwt enabled
     tap enabled
     natural_scroll disabled
     middle_emulation enabled
+    tap_button_map lmr
+}
+
+input "9494:153:COOLERMASTER_CM310" {
+    accel_profile adaptive
+    pointer_accel 0
 }

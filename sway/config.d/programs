@@ -1,9 +1,19 @@
-set $term termite
-set $firefox firefox-nightly
-set $telegram telegram-desktop
+set $term alacritty
+
+exec swayidle -w \
+    timeout 295 'pactl list | rg RUNNING || toastify send -t 4500 "screen will lock in 5 seconds"' \
+    timeout 300 'pactl list | rg RUNNING || lock -f' \
+    timeout 600 'pactl list | rg RUNNING || swaymsg output * dpms off' \
+    resume "swaymsg output * dpms on" \
+    before-sleep 'lock -f'
 
 bindsym $mod+Return exec $term
 bindsym Insert exec $term -e python
-bindsym $mod+t exec $telegram
-bindsym $mod+x exec $firefox
-bindsym $mod+s exec slack
+bindsym $mod+t exec QT_QPA_PLATFORM=wayland telegram-desktop
+bindsym $mod+x exec firefox-nightly
+bindsym $mod+d exec bemenu-run -bip '>'
+bindsym $mod+k exec slack
+bindsym $mod+m exec thunderbird
+
+for_window [app_id="firefox" title="Picture-in-Picture"] \
+    floating enable, sticky enable

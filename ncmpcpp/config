@@ -80,7 +80,7 @@
 #
 ## Available values: spectrum, wave, wave_filled, ellipse.
 ##
-#visualizer_type = wave
+#visualizer_type = wave_filled
 #
 #visualizer_look = ●▮
 #

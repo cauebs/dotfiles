@@ -1,0 +1,5 @@
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+xsetroot -solid "#1d2021"
+setxkbmap br abnt2
+exec i3

@@ -1,16 +1,25 @@
-bindsym XF86MonBrightnessUp exec brightnessctl s 5%+
-bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
+bindsym XF86MonBrightnessUp exec lux -a 5%
+bindsym XF86MonBrightnessDown exec lux -s 5%
 
+bindsym $mod+Prior exec pamixer -i 5
+bindsym $mod+Next exec pamixer -d 5
 bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioMute exec pamixer -t
 
 bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioPause exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc cdprev
 
 bindsym Shift+XF86AudioPlay exec playerctl play-pause
+bindsym Shift+XF86AudioPause exec playerctl play-pause
 bindsym Shift+XF86AudioStop exec playerctl stop
 bindsym Shift+XF86AudioNext exec playerctl next
 bindsym Shift+XF86AudioPrev exec playerctl previous
+
+bindsym $mod+Insert exec playerctl play-pause
+bindsym $mod+Delete exec playerctl stop
+bindsym $mod+Home exec playerctl next
+bindsym $mod+End exec playerctl previous

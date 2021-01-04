@@ -1,0 +1,133 @@
+# When an empty password is provided, do not validate it.
+ignore-empty-password
+
+# Show current count of failed authentication attempts.
+show-failed-attempts
+
+# Use a screenshots as the background image.
+screenshots
+
+# Always show the indicator.
+indicator
+
+# Show time and date.
+clock
+
+# The format string for the time. Defaults to '%X'.
+timestr=%R
+
+# The format string for the date. Defaults to '%a, %x'.
+datestr=%a, %-d %b
+
+# Sets the color of backspace highlight segments.
+# bs-hl-color=<color>
+
+# Sets the color of backspace highlight segments when Caps Lock is active.
+# caps-lock-bs-hl-color=<color>
+
+# Sets the color of the key press highlight segments when Caps Lock is active.
+# caps-lock-key-hl-color=<color>
+
+# Sets the font of the text.
+# font=<font>
+
+# Sets a fixed font size for the indicator text.
+# font-size=<size>
+
+# Sets the indicator radius.
+# indicator-radius=<radius>
+
+# Sets the indicator thickness.
+# indicator-thickness=<thick>
+
+# Sets the color of the inside of the indicator.
+# inside-color=<color>
+
+# Sets the color of the inside of the indicator when cleared.
+# inside-clear-color=<color>
+
+# Sets the color of the inside of the indicator when Caps Lock is active.
+# inside-caps-lock-color=<color>
+
+# Sets the color of the inside of the indicator when verifying.
+# inside-ver-color=<color>
+
+# Sets the color of the inside of the indicator when invalid.
+# inside-wrong-color=<color>
+
+# Sets the color of the key press highlight segments.
+# key-hl-color=<color>
+
+# Sets the background color of the box containing the layout text.
+# layout-bg-color=<color>
+
+# Sets the color of the border of the box containing the layout text.
+# layout-border-color=<color>
+
+# Sets the color of the layout text.
+# layout-text-color=<color>
+
+# Sets the color of the line between the inside and ring.
+# line-color=<color>
+
+# Sets the color of the line between the inside and ring when cleared.
+# line-clear-color=<color>
+
+# Sets the color of the line between the inside and ring when Caps Lock is active.
+# line-caps-lock-color=<color>
+
+# Sets the color of the line between the inside and ring when verifying.
+# line-ver-color=<color>
+
+# Sets the color of the line between the inside and ring when invalid.
+# line-wrong-color=<color>
+
+# Use the inside color for the line between the inside and ring.
+# line-uses-inside
+
+# Use the ring color for the line between the inside and ring.
+# line-uses-ring
+
+# Sets the color of the ring of the indicator.
+# ring-color=<color>
+
+# Sets the color of the ring of the indicator when cleared.
+# ring-clear-color=<color>
+
+# Sets the color of the ring of the indicator when Caps Lock is active.
+# ring-caps-lock-color=<color>
+
+# Sets the color of the ring of the indicator when verifying.
+# ring-ver-color=<color>
+
+# Sets the color of the ring of the indicator when invalid.
+# ring-wrong-color=<color>
+
+# Sets the color of the lines that separate highlight segments.
+# separator-color=<color>
+
+# Sets the color of the text.
+# text-color=<color>
+
+# Sets the color of the text when cleared.
+# text-clear-color=<color>
+
+# Sets the color of the text when Caps Lock is active.
+# text-caps-lock-color=<color>
+
+# Sets the color of the text when verifying.
+# text-ver-color=<color>
+
+# Sets the color of the text when invalid.
+# text-wrong-color=<color>
+
+# x<times>   Blur images.
+effect-blur=6x6
+
+# Scale images.
+# effect-scale=<scale>
+
+# Make images greyscale.
+# effect-greyscale
+
+

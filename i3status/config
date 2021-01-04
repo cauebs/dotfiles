@@ -2,6 +2,9 @@ general {
     colors = true
     interval = 5
     output_format = "i3bar"
+    color_good = "#98971a"
+    color_bad = "#cc241d"
+    color_degraded = "#fabd2f"
 }
 
 order += "wireless _first_"
@@ -46,5 +49,5 @@ tztime date {
 }
 
 tztime time {
-    format = "%H:%M"
+    format = "%Hh%M"
 }

@@ -1,5 +1,5 @@
 function fish_prompt --description 'Write out the prompt'
-	set -l last_status $status
+    set -l last_pipestatus $pipestatus
 
     if not set -q __fish_git_prompt_show_informative_status
         set -g __fish_git_prompt_show_informative_status 1
@@ -7,7 +7,6 @@ function fish_prompt --description 'Write out the prompt'
     if not set -q __fish_git_prompt_hide_untrackedfiles
         set -g __fish_git_prompt_hide_untrackedfiles 1
     end
-
     if not set -q __fish_git_prompt_color_branch
         set -g __fish_git_prompt_color_branch magenta --bold
     end
@@ -23,7 +22,6 @@ function fish_prompt --description 'Write out the prompt'
     if not set -q __fish_git_prompt_char_upstream_prefix
         set -g __fish_git_prompt_char_upstream_prefix ""
     end
-
     if not set -q __fish_git_prompt_char_stagedstate
         set -g __fish_git_prompt_char_stagedstate "●"
     end
@@ -33,13 +31,12 @@ function fish_prompt --description 'Write out the prompt'
     if not set -q __fish_git_prompt_char_untrackedfiles
         set -g __fish_git_prompt_char_untrackedfiles "…"
     end
-    if not set -q __fish_git_prompt_char_conflictedstate
-        set -g __fish_git_prompt_char_conflictedstate "✖"
+    if not set -q __fish_git_prompt_char_invalidstate
+        set -g __fish_git_prompt_char_invalidstate "✖"
     end
     if not set -q __fish_git_prompt_char_cleanstate
         set -g __fish_git_prompt_char_cleanstate "✔"
     end
-
     if not set -q __fish_git_prompt_color_dirtystate
         set -g __fish_git_prompt_color_dirtystate blue
     end
@@ -54,10 +51,6 @@ function fish_prompt --description 'Write out the prompt'
     end
     if not set -q __fish_git_prompt_color_cleanstate
         set -g __fish_git_prompt_color_cleanstate green --bold
-    end
-
-    if not set -q __fish_prompt_normal
-        set -g __fish_prompt_normal (set_color normal)
     end
 
     set -l color_cwd
@@ -81,13 +74,11 @@ function fish_prompt --description 'Write out the prompt'
     echo -n (prompt_pwd)
     set_color normal
 
-    printf '%s ' (__fish_vcs_prompt)
+    printf '%s ' (fish_vcs_prompt)
 
-    if not test $last_status -eq 0
-        set_color $fish_color_error
-    end
+    set -l pipestatus_string (__fish_print_pipestatus "[" "] " "|" (set_color $fish_color_status) (set_color --bold $fish_color_status) $last_pipestatus)
+    echo -n $pipestatus_string
+    set_color normal
 
     echo -n "$suffix "
-
-    set_color normal
 end

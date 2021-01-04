@@ -1,15 +1,16 @@
 bar {
     status_command i3status
     font monospace 9
+    mode hide
+    hidden_state hide
+    modifier $mod
     colors {
-        background #1c1c1c
-        statusline #ffffff
-        separator #656565
-
-        # Class             Border  BG      Text
-        focused_workspace   #888888 #1c1c1c #eaeaea
-        active_workspace    #333333 #5f676a #ffffff
-        inactive_workspace  #333333 #222222 #888888
-        urgent_workspace    #2f343a #ffc123 #ffffff
+        background #3c3836
+        statusline #ebdbb2
+        separator #666666
+        focused_workspace  #458588 #458588 #ebdbb2
+		active_workspace   #83a598 #83a598 #ebdbb2
+		inactive_workspace #504945 #504945 #ebdbb2
+		urgent_workspace   #cc241d #cc241d #504945
     }
 }
