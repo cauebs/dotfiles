@@ -1,5 +1,5 @@
 xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto
+xrandr --output HDMI-1-1 --mode 1920x1080 --rate 74.97 --dpi 96
 xsetroot -solid "#1d2021"
 setxkbmap br abnt2
 exec i3

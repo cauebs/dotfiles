@@ -1,32 +1,68 @@
 colorscheme gruvbox
+add-highlighter global/ wrap -word -indent
+add-highlighter global/ number-lines -hlcursor
+add-highlighter global/ show-matching
 
-set-option global tabstop 4
-set-option global indentwidth 4
+require-module plug
 
-eval %sh{kak-lsp --kakoune -s $kak_session}
-hook global WinSetOption filetype=(rust|python|c|cpp) %{
-    lsp-enable-window
-    lsp-auto-hover-enable
+plug plug https://github.com/alexherbo2/plug.kak
+
+plug search-highlighter https://github.com/alexherbo2/search-highlighter.kak %{
+    search-highlighter-enable
 }
 
-# hook global WinSetOption filetype=rust %{
-#     hook window -group rust-inlay-hints BufReload .* rust-analyzer-inlay-hints
-#     hook window -group rust-inlay-hints NormalIdle .* rust-analyzer-inlay-hints
-#     hook window -group rust-inlay-hints InsertIdle .* rust-analyzer-inlay-hints
-#     hook -once -always window WinSetOption filetype=.* %{
-#         remove-hooks window rust-inlay-hints
-#     }
-# }
+plug smarttab https://github.com/andreyorst/smarttab.kak %{
+    set-option global tabstop 4
+    set-option global indentwidth 4
+    set-option global softtabstop 4
+    hook global WinSetOption filetype=.* expandtab
+}
 
-# lsp-inlay-diagnostics-enable global
+plug move-line https://github.com/alexherbo2/move-line.kak %{
+    map global normal <c-down> ": move-line-below<ret>"
+    map global normal <c-up> ": move-line-above<ret>"
+}
 
-set-option global lsp_server_configuration rust.clippy_preference="on"
+plug-old kakboard https://github.com/lePerdu/kakboard %{
+    declare-option str-list kakboard_paste_keys ""
+    declare-option str-list kakboard_copy_keys  ""
 
-hook global WinSetOption filetype=<language> %{
-    hook window -group semantic-tokens BufReload .* lsp-semantic-tokens
-    hook window -group semantic-tokens NormalIdle .* lsp-semantic-tokens
-    hook window -group semantic-tokens InsertIdle .* lsp-semantic-tokens
-    hook -once -always window WinSetOption filetype=.* %{
-        remove-hooks window semantic-tokens
-    }
+    hook global WinCreate        .* %{ kakboard-enable } -once
+    hook global WinCreate        .* %{ kakboard-pull-clipboard } -once
+    hook global FocusIn          .* %{ kakboard-pull-clipboard }
+    hook global RegisterModified \" %{ kakboard-push-clipboard }
+}
+
+eval %sh{kak-lsp --kakoune -s $kak_session}
+map global normal <c-l> ": enter-user-mode lsp<ret>"
+
+hook global WinSetOption filetype=(rust|python) %{
+    lsp-enable-window
+    lsp-auto-signature-help-enable
+    lsp-inlay-diagnostics-enable global
+    set global lsp_hover_max_lines 40
+}
+
+plug-old sudo-write https://github.com/occivink/kakoune-sudo-write
+
+plug-old filetree https://github.com/occivink/kakoune-filetree %{
+    unmap global normal F
+    map global normal f ": filetree<ret>"
+    set-option global filetree_find_cmd "fd -t f"
+}
+
+plug-old buffer-switcher https://github.com/occivink/kakoune-buffer-switcher %{
+    map global normal ^ q
+    map global normal <a-^> Q
+    map global normal q b
+    map global normal Q B
+    map global normal <a-q> <a-b>
+    map global normal <a-Q> <a-B>
+
+    map global normal b ": buffer-switcher<ret>"
+}
+
+plug powerline https://github.com/jdugan6240/powerline.kak %{
+    set-option global powerline_format "mode_info line_column lsp filetype bufname git"
+    powerline-start
 }

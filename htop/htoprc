@@ -1,9 +1,9 @@
 # Beware! This file is rewritten by htop when settings are changed in the interface.
 # The parser is also very primitive, and not human-friendly.
 fields=0 48 20 39 47 109 110 46 2 49 1
-sort_key=109
-sort_direction=-1
-tree_sort_key=46
+sort_key=46
+sort_direction=1
+tree_sort_key=0
 tree_sort_direction=1
 hide_kernel_threads=1
 hide_userland_threads=1
@@ -36,3 +36,4 @@ left_meters=CPU CPU Blank Memory Memory Blank Tasks LoadAverage Uptime
 left_meter_modes=3 2 2 3 2 2 2 2 2
 right_meters=CPU(1) CPU(2) CPU(3) CPU(4)
 right_meter_modes=3 3 3 3
+hide_function_bar=0

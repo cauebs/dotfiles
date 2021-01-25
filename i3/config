@@ -55,7 +55,7 @@ bindsym Insert exec --no-startup-id $term -e python
 bindsym $mod+t exec --no-startup-id $telegram
 bindsym $mod+x exec --no-startup-id $firefox
 bindsym $mod+s exec --no-startup-id slack
-bindsym $mod+d exec --no-startup-id exec dmenu_run -b -i -p '>' -fn 'Fira Code 11'
+bindsym $mod+d exec --no-startup-id exec bemenu-run -bip '>'
 
 exec --no-startup-id flameshot
 

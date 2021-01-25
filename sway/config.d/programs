@@ -9,10 +9,9 @@ exec swayidle -w \
 
 bindsym $mod+Return exec $term
 bindsym Insert exec $term -e python
-bindsym $mod+t exec QT_QPA_PLATFORM=wayland telegram-desktop
+bindsym $mod+t exec telegram-desktop
 bindsym $mod+x exec firefox-nightly
 bindsym $mod+d exec bemenu-run -bip '>'
-bindsym $mod+k exec slack
 bindsym $mod+m exec thunderbird
 
 for_window [app_id="firefox" title="Picture-in-Picture"] \

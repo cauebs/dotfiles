@@ -1,9 +1,10 @@
 bar {
     status_command i3status
-    font monospace 9
+    font Fira Code 9
     mode hide
     hidden_state hide
     modifier $mod
+
     colors {
         background #3c3836
         statusline #ebdbb2

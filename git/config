@@ -11,3 +11,7 @@
 [delta]
 	features = side-by-side line-numbers
 	syntax-theme = gruvbox
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
