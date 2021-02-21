@@ -39,7 +39,6 @@ map global normal <c-l> ": enter-user-mode lsp<ret>"
 hook global WinSetOption filetype=(rust|python) %{
     lsp-enable-window
     lsp-auto-signature-help-enable
-    lsp-inlay-diagnostics-enable global
     set global lsp_hover_max_lines 40
 }
 
@@ -60,6 +59,12 @@ plug-old buffer-switcher https://github.com/occivink/kakoune-buffer-switcher %{
     map global normal <a-Q> <a-B>
 
     map global normal b ": buffer-switcher<ret>"
+}
+
+plug view-mode https://github.com/alexherbo2/view-mode.kak
+
+plug-old smooth-scroll https://github.com/caksoylar/kakoune-smooth-scroll %{
+    hook global WinCreate [^*].* %{ hook -once window WinDisplay .* smooth-scroll-enable }
 }
 
 plug powerline https://github.com/jdugan6240/powerline.kak %{

@@ -5,13 +5,13 @@ exec kanshi
 output eDP-1 {
     disable
     resolution 1366x768@60Hz
-    position 0 312
+    position 1920 312
 }
 
 output HDMI-A-1 {
     enable
     resolution 1920x1080@74.973000Hz
-    position 1366 0
+    position 0 0
 }
 
 output * {

@@ -3,6 +3,8 @@ bindsym XF86MonBrightnessDown exec lux -s 5%
 
 bindsym $mod+Prior exec pamixer -i 5
 bindsym $mod+Next exec pamixer -d 5
+bindsym $mod+XF86AudioRaiseVolume exec pamixer -i 5
+bindsym $mod+XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioMute exec pamixer -t
