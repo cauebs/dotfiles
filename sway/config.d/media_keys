@@ -9,6 +9,10 @@ bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioMute exec pamixer -t
 
+bindsym Shift+Control_R exec xdotool key Shift+Control_R
+bindsym Control_R exec xdotool keydown Control_R
+bindsym --release Control_R exec xdotool keyup Control_R
+
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioPause exec mpc toggle
 bindsym XF86AudioStop exec mpc stop

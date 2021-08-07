@@ -10,6 +10,7 @@ general {
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "volume master"
+order += "volume mic"
 order += "battery all"
 order += "tztime date"
 order += "tztime time"
@@ -28,6 +29,14 @@ volume master {
     device = "pulse"
     format = " %volume"
     format_muted = " %volume"
+}
+
+volume mic {
+    device = "hw:0"
+    mixer  = "Capture"
+    mixer_idx = 0
+    format = " %volume"
+    format_muted = " %volume"
 }
 
 battery all {

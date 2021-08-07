@@ -1,4 +1,4 @@
-set $term alacritty
+set $term foot
 
 exec swayidle -w \
     timeout 295 'pactl list | rg RUNNING || toastify send -t 4500 "screen will lock in 5 seconds"' \
@@ -8,11 +8,14 @@ exec swayidle -w \
     before-sleep 'lock -f'
 
 bindsym $mod+Return exec $term
-bindsym Insert exec $term -e python
-bindsym $mod+t exec telegram-desktop
+#bindsym Insert exec $term -e python
+bindsym Insert exec foot python
+bindsym $mod+t exec env QT_QPA_PLATFORM=wayland telegram-desktop
 bindsym $mod+x exec firefox-nightly
-bindsym $mod+d exec bemenu-run -bip '>'
+bindsym $mod+d exec bemenu-run -b -ip '>'
 bindsym $mod+m exec thunderbird
+bindsym $mod+g exec gtg
+bindsym $mod+n exec swaync-client -t
 
 for_window [app_id="firefox" title="Picture-in-Picture"] \
     floating enable, sticky enable
