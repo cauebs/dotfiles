@@ -14,7 +14,7 @@ input "9494:127:Cooler_Master_Technology_Inc._Gaming_MECH_KB" {
 }
 
 input "2:7:SynPS/2_Synaptics_TouchPad" {
-    events disabled_on_external_mouse
+	# events disabled_on_external_mouse
     dwt enabled
     tap enabled
     natural_scroll disabled

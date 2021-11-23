@@ -1,0 +1,74 @@
+* {
+	font-size:12px;
+	font-family: Fira Code;
+	border-color:transparent;
+}
+
+window#waybar {
+	background-color: transparent;
+}
+window#waybar:first-child > box {
+    /*margin: 4px;
+    padding: 0px 4px 0px 4px;
+    border-radius: 10px 10px ;*/
+    background-color: #282a36 ;
+    color: #f8f8f2;
+    /*border-bottom: 1px solid #bd93f9;
+    border-top: 1px solid #50fa7b;*/
+
+}
+
+#workspaces {
+	padding: 0 4px 0 4px;
+ 	font-size: 12px;
+}
+
+#workspaces button {
+	padding: 0 4px 0 4px;
+	background-color: transparent ;
+	color: #f8f8f2;
+	margin-bottom:2px;
+	margin-top:2px;
+}
+
+#workspaces button:hover {
+	border-color: transparent;
+	color: #ff5555;
+}
+
+#workspaces button.focused {
+	color: #50fa7b;
+}
+
+#workspaces button:active {
+	color: #bd93f9;
+	background: transparent;
+}
+
+#workspaces button.urgent {
+	color: #ff8080;
+}
+#battery {
+	background-color: transparent;
+	padding: 0px 8px 0px 8px;
+	font-family: Fira Code;
+}
+#network {
+	padding: 0px 8px 0px 8px;
+	font-family: Fira Code;
+}
+#clock {
+	padding: 0px 8px 0px 8px;
+	color: #50fa7b;
+ 	font-family: Fira Code;
+	}
+#pulseaudio {
+        padding: 0px 8px 0px 8px;
+	font-family: Fira Code;
+}
+#pulseaudio.muted {
+	padding: 0px 8px 0px 8px;
+}
+#custom-ddcutil {
+	padding: 0px 8px 0px 8px;
+}

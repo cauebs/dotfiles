@@ -14,6 +14,7 @@ exec --no-startup-id i3wsr
 
 bar {
     status_command i3status
+    tray_output HDMI-1-1
     font pango:Fira Code 9
     colors {
         background #1c1c1c
@@ -47,7 +48,7 @@ bindsym Shift+XF86AudioNext exec --no-startup-id playerctl next
 bindsym Shift+XF86AudioPrev exec --no-startup-id playerctl previous
 
 set $term alacritty
-set $firefox firefox-nightly
+set $firefox firefox
 set $telegram telegram-desktop
 
 bindsym $mod+Return exec --no-startup-id $term

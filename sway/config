@@ -1,6 +1,7 @@
 set $mod Mod4
 
 include config.d/*
+include /etc/sway/config.d/50-systemd-user.conf
 
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+r reload
@@ -66,10 +67,10 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 mode "resize" {
-    #bindsym Left resize shrink width 10 px or 10 ppt
-    #bindsym Down resize grow height 10 px or 10 ppt
-    #bindsym Up resize shrink height 10 px or 10 ppt
-    #bindsym Right resize grow width 10 px or 10 ppt
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
     bindsym h resize shrink width 10 px or 10 ppt
     bindsym j resize shrink height 10 px or 10 ppt

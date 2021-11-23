@@ -1,0 +1,57 @@
+{
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 14, // Waybar height (to be removed for auto height)
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["wlr/taskbar"],
+    "modules-right": ["pulseaudio", "network", "battery", "clock", "tray"],
+
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+		"format": "{:%a %d, %Hh%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%A, %d de %B, %Hh%M}"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+   "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ipaddr}",
+        "format-linked": " (No IP)",
+        "format-disconnected": "⚠ Disconnected ",
+        "format-alt": "{ifname}: {ipaddr}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+	"wlr/taskbar": {
+        "on-click": "activate",
+        "on-click-middle": "close",
+    }
+}
+

@@ -1,8 +1,9 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export EDITOR:kak
-SETUVAR --export GTK_THEME:Gruvbox\x2dMaterial\x2dDark
+SETUVAR --export GTK_THEME:Dracula
 SETUVAR --export MOZ_ENABLE_WAYLAND:true
+SETUVAR --export XDG_CURRENT_DESKTOP:sway
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d

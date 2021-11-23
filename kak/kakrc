@@ -1,29 +1,20 @@
-colorscheme gruvbox
+colorscheme dracula
+
 add-highlighter global/ wrap -word -indent
 add-highlighter global/ number-lines -hlcursor
 add-highlighter global/ show-matching
 
-require-module plug
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+plug "andreyorst/plug.kak" noload
 
-plug plug https://github.com/alexherbo2/plug.kak
-
-plug search-highlighter https://github.com/alexherbo2/search-highlighter.kak %{
-    search-highlighter-enable
-}
-
-plug smarttab https://github.com/andreyorst/smarttab.kak %{
+plug "andreyorst/smarttab.kak" %{
     set-option global tabstop 4
     set-option global indentwidth 4
     set-option global softtabstop 4
     hook global WinSetOption filetype=.* expandtab
 }
 
-plug move-line https://github.com/alexherbo2/move-line.kak %{
-    map global normal <c-down> ": move-line-below<ret>"
-    map global normal <c-up> ": move-line-above<ret>"
-}
-
-plug-old kakboard https://github.com/lePerdu/kakboard %{
+plug "lePerdu/kakboard" %{
     declare-option str-list kakboard_paste_keys ""
     declare-option str-list kakboard_copy_keys  ""
 
@@ -33,24 +24,22 @@ plug-old kakboard https://github.com/lePerdu/kakboard %{
     hook global RegisterModified \" %{ kakboard-push-clipboard }
 }
 
-eval %sh{kak-lsp --kakoune -s $kak_session}
-map global normal <c-l> ": enter-user-mode lsp<ret>"
+#eval %sh{kak-lsp --kakoune -s $kak_session}
+#map global normal <c-l> ": enter-user-mode lsp<ret>"
 
-hook global WinSetOption filetype=(rust|python) %{
-    lsp-enable-window
-    lsp-auto-signature-help-enable
-    set global lsp_hover_max_lines 40
-}
+#hook global WinSetOption filetype=(rust|python) %{
+#    lsp-enable-window
+#    lsp-auto-signature-help-enable
+#    set global lsp_hover_max_lines 40
+#}
 
-plug-old sudo-write https://github.com/occivink/kakoune-sudo-write
-
-plug-old filetree https://github.com/occivink/kakoune-filetree %{
+plug "occivink/kakoune-filetree" %{
     unmap global normal F
     map global normal f ": filetree<ret>"
     set-option global filetree_find_cmd "fd -t f"
 }
 
-plug-old buffer-switcher https://github.com/occivink/kakoune-buffer-switcher %{
+plug "occivink/kakoune-buffer-switcher" %{
     map global normal ^ q
     map global normal <a-^> Q
     map global normal q b
@@ -61,13 +50,12 @@ plug-old buffer-switcher https://github.com/occivink/kakoune-buffer-switcher %{
     map global normal b ": buffer-switcher<ret>"
 }
 
-plug view-mode https://github.com/alexherbo2/view-mode.kak
+#plug "caksoylar/kakoune-smooth-scroll" %{
+#    hook global WinCreate [^*].* %{ hook -once window WinDisplay .* smooth-scroll-enable }
+#}
 
-plug-old smooth-scroll https://github.com/caksoylar/kakoune-smooth-scroll %{
-    hook global WinCreate [^*].* %{ hook -once window WinDisplay .* smooth-scroll-enable }
-}
-
-plug powerline https://github.com/jdugan6240/powerline.kak %{
-    set-option global powerline_format "mode_info line_column lsp filetype bufname git"
+plug "andreyorst/powerline.kak" defer powerline %{
+    powerline-format global "mode_info line_column lsp filetype bufname git"
+} config %{
     powerline-start
 }

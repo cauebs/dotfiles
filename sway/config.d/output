@@ -15,5 +15,5 @@ output eDP-1 {
 }
 
 output * {
-    background #1d2021 solid_color
+    background #282a36 solid_color
 }
