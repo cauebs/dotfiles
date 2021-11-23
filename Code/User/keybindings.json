@@ -1,0 +1,82 @@
+[
+    {
+        "key": "ctrl+i",
+        "command": "-editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "-toggleSuggestionDetails",
+        "when": "suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "rust-analyzer.toggleInlayHints"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "alt+left",
+        "command": "cursorWordPartLeft"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "cursorWordPartLeftSelect"
+    },
+    {
+        "key": "alt+right",
+        "command": "cursorWordPartRight"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "cursorWordPartRightSelect"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "deleteWordPartLeft"
+    },
+    {
+        "key": "alt+delete",
+        "command": "deleteWordPartRight"
+    },
+    {
+        "key": "ctrl+[BracketLeft]",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+[BracketLeft]",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k u",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "ctrl+k l",
+        "command": "editor.action.transformToLowercase"
+    }
+]
