@@ -8,28 +8,17 @@ bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exit
 #bindsym $mod+l exec lock
 
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-bindsym $mod+Tab exec swayr switch-to-urgent-or-lru-window
-bindsym $mod+Shift+Tab exec swayr switch-window
+bindsym $mod+Tab workspace back_and_forth
 
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -66,25 +55,6 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-mode "resize" {
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize grow height 10 px or 10 ppt
-    bindsym Up resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
-
-    bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize shrink height 10 px or 10 ppt
-    bindsym k resize grow height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
-
-#exec --no-startup-id swayfocus 0.75
 exec --no-startup-id swaync
-exec env RUST_BACKTRACE=1 swayrd > /tmp/swayrd.log 2>&1
 
-for_window [app_id="firefox"] inhibit_idle fullscreen
 for_window [app_id=".*"] inhibit_idle fullscreen

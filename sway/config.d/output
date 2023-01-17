@@ -1,18 +1,4 @@
-# swaymsg -t get_outputs
-
 exec kanshi
-
-output HDMI-A-1 {
-    enable
-    resolution 1920x1080@74.973000Hz
-    position 0 0
-}
-
-output eDP-1 {
-    enable
-    resolution 1366x768@60Hz
-    position 1920 400
-}
 
 output * {
     background #282a36 solid_color

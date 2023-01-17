@@ -1,4 +1,10 @@
 {
   "positionX" : "right",
-  "positionY" : "top"
+  "positionY" : "top",
+  "widgets": [
+    "title",
+    "dnd",
+    "notifications",
+    "mpris"
+    ]
 }

@@ -1,12 +1,4 @@
-bindsym --release {
-    Print exec capitu screenshot
-    Control+Print exec capitu screenshot -c
-    Shift+Print exec capitu -s screenshot
-    Control+Shift+Print exec capitu -s screenshot -c
-}
-
-bindsym $mod+Print exec capitu record
-bindsym $mod+Shift+Print exec capitu -s record
-bindsym $mod+Alt+Print exec capitu record -a
-bindsym $mod+Shift+Alt+Print exec capitu -s record -a
-bindsym $mod+Control+Print exec capitu kill
+bindsym Print exec grimshot save
+bindsym Control+Print exec grimshot copy
+bindsym Shift+Print exec grimshot save window
+bindsym Control+Shift+Print exec grimshot copy window

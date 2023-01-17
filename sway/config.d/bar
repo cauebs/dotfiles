@@ -1,3 +1,5 @@
 bar {
-    swaybar_command waybar
+    font pango:JetBrains Mono, FontAwesome 9
+    swaybar_command swaybar
+    status_command i3status-rs
 }

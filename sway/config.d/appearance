@@ -1,17 +1,2 @@
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #50fa7b
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
-client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
-client.background       #F8F8F2
-
 default_border pixel 1
-default_floating_border pixel 1
 hide_edge_borders smart
-
-exec_always import-gsettings \
-    gtk-theme:'Dracula' \
-    icon-theme:'Breeze Dark' \
-    cursor-theme:'Capitaine Cursors'
-
-exec export GTK_THEME=Dracula
